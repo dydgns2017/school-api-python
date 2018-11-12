@@ -1,6 +1,5 @@
 # school-api-python
-## 해당 오픈소스는 
-https://github.com/agemor/school-api를 참조하여 Python으로 json을 생성하는 목적으로 만들어졌습니다.
+해당 오픈소스는 https://github.com/agemor/school-api를 참조하여 Python으로 json을 생성하는 목적으로 만들어졌습니다.
 
 ## 사용방법
 
@@ -9,11 +8,11 @@ https://github.com/agemor/school-api를 참조하여 Python으로 json을 생성
 다음과 같이 코드를 입력합니다.
 
 ```
-
+python3 haksa.py "교육청 코드" "학교 고유코드" "학교 분류코드" "연도" "월"
 ```
 
 예시 ) 송파공업고등학교
-
+python3 haksa.py "stu.sen.go.kr" "B100000593" "4" "2018" "11"
 ```
 ex )
 
@@ -34,9 +33,9 @@ ex )
 
 ## 코드 값들에 대한 설명은 다음과 같습니다.
 
-#### 학교 코드
+#### 학교 고유코드
 
-교육청 코드는 밑에 있는 링크로 들어가서 코드 값을 찾습니다.
+학교 고유코드는 밑에 있는 링크로 들어가서 코드 값을 찾습니다.
 
 https://www.meatwatch.go.kr/biz/bm/sel/schoolListPopup.do
 

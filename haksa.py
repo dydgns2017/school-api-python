@@ -1,10 +1,17 @@
 import requests, re, json, sys
-from datetime import datetime
 
-year=datetime.now().year
+## sys.argv로 인자값을 받음
+officeCode=sys.argv[1] ## 교육청 코드
+schulCode=sys.argv[2] ## 학교 고유코드
+schulCrseCode=sys.argv[3] ## 학교 분류코드 (고등학교, 중학교, 초등학교)
+schulKndScCode="0" + str(sys.argv[3]) ## 학교 분류코드
+ay=sys.argv[4]
+mm=sys.argv[5]
 
-URL="https://stu.sen.go.kr/sts_sci_sf01_001.do"
-params = {'schulCode': 'B100000593', 'schulCrseScCode': '4', 'schulKndScCode' : '04', 'ay' : str(year)} 
+##neis web requests
+URL="https://" + officeCode + "/sts_sci_sf01_001.do"
+##params = {'schulCode': 'B100000593', 'schulCrseScCode': '4', 'schulKndScCode' : '04', 'ay' : str(year)} 
+params = {'schulCode': str(schulCode), 'schulCrseScCode': str(schulCrseCode), 'schulKndScCode' : str(schulKndScCode), 'ay' : str(ay), 'mm' : str(mm)}
 response = requests.get(URL, params=params).text
 data = response[response.find("<tbody>"):response.find("</tbody>")]
 
