@@ -1,5 +1,5 @@
 # school-api-python
-해당 오픈소스는 https://github.com/agemor/school-api를 참조하여 Python으로 json을 생성하는 목적으로 만들어졌습니다.
+해당 오픈소스는 https://github.com/agemor/school-api 를 참조하여 Python으로 json을 생성하는 목적으로 만들어졌습니다.
 
 ## 사용방법
 
